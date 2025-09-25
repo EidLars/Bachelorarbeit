@@ -62,6 +62,14 @@ Das Skript erstellt eine JSON-Datei mit allen gefundenen Claims, KPIs und – so
 
 ## Modulare Nutzung in Notebooks
 
+Für die Bachelorarbeit stehen drei aufeinander aufbauende Jupyter-Notebooks im Projektstamm zur Verfügung:
+
+1. **`01_claim_extraction.ipynb`** – Lädt ESG-Berichte, führt die ClimateBERT-basierte Claim-Erkennung aus und speichert die Ergebnisse in `data/claims.csv`.
+2. **`02_kpi_extraction.ipynb`** – Extrahiert Emissions- und Nachhaltigkeitskennzahlen aus Geschäftsberichten und legt sie in `data/kpis.csv` ab.
+3. **`03_llm_evaluation.ipynb`** – Konsolidiert beide CSVs, ruft DeepSeek R1 Zero über die OpenRouter-API auf und erzeugt `data/evaluations.json` mit den Konsistenzbewertungen.
+
+Alle Notebooks importieren die Module aus `src/greenwashing_pipeline` direkt und können daher bei Bedarf angepasst oder in separate Experimente integriert werden.
+
 ```python
 from greenwashing_pipeline.pipeline import GreenwashingPipeline
 from greenwashing_pipeline.llm_evaluator import ConsistencyEvaluator
