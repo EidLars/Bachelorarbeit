@@ -1,28 +1,49 @@
 [
   {
-    "text": "We achieved net zero CO₂ emissions in 2023.",
-    "kpis": {
-      "year": 2023,
-      "scope_1": "1,200,000 t CO₂",
-      "scope_2": "450,000 t CO₂",
-      "scope_3": "2,300,000 t CO₂",
-      "scope_total": "3,950,000 t CO₂"
-    }
+    "document": "example_report",
+    "page": 3,
+    "claim": "We achieved net zero CO₂ emissions in 2023.",
+    "kpis": [
+      {
+        "kpi_type": "scope_emissions",
+        "metadata": {"scope": "1"},
+        "value": 1200000,
+        "unit": "t CO₂e",
+        "year": 2023
+      },
+      {
+        "kpi_type": "scope_emissions",
+        "metadata": {"scope": "2"},
+        "value": 450000,
+        "unit": "t CO₂e",
+        "year": 2023
+      },
+      {
+        "kpi_type": "scope_emissions",
+        "metadata": {"scope": "3"},
+        "value": 2300000,
+        "unit": "t CO₂e",
+        "year": 2023
+      }
+    ]
   },
   {
-    "text": "Our company reduced emissions by 50% in 2022 compared to 2020.",
-    "kpis": {
-      "year": 2020,
-      "scope_total": "5,000,000 t CO₂",
-      "year_compare": 2022,
-      "scope_total_compare": "4,800,000 t CO₂"
-    }
-  },
-  {
-    "text": "Our supply chain is fully sustainable.",
-    "kpis": {
-      "supplier_audit_pass_rate": "65%",
-      "certified_suppliers": "45%"
-    }
+    "document": "example_report",
+    "page": 7,
+    "claim": "Our company reduced emissions by 50% in 2022 compared to 2020.",
+    "kpis": [
+      {
+        "kpi_type": "total_emissions",
+        "value": 5000000,
+        "unit": "t CO₂e",
+        "year": 2020
+      },
+      {
+        "kpi_type": "total_emissions",
+        "value": 4800000,
+        "unit": "t CO₂e",
+        "year": 2022
+      }
+    ]
   }
 ]
